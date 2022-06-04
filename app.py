@@ -6,7 +6,8 @@ app = FastAPI()
 
 @app.get("/add/{first_number}/{second_number}")
 def add(x: float, y: float):
-    return x + y
+    total = x + y
+    return {"total": total}
 
 if __name__=="__main__":
     uvicorn.run(app)
